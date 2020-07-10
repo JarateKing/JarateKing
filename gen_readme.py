@@ -32,7 +32,5 @@ def longestStreak(data):
 with open('test.json', 'r') as json_file:
 	data = json.load(json_file)
 	streak, startDate, endDate  = longestStreak(data)
-	print(streak)
-	print(startDate)
-	print(endDate)
+	print("Daily Contributions Streak: **" + str(streak) + "** (" + startDate[0:10] + " to " + endDate[0:10] + ")")
 	
