@@ -24,7 +24,7 @@ def longestStreak(data):
 	for year in data["data"]["viewer"]:
 		for week in data["data"]["viewer"][year]["contributionCalendar"]["weeks"]:
 			for day in week["contributionDays"]:
-				if (day["date"][0:4] == year):
+				if (day["date"][0:4] == year[1:5]):
 					if (day["contributionCount"] > 0):
 						if (currentStreak):
 							streak = streak + 1
