@@ -1,4 +1,8 @@
+from python_graphql_client import GraphqlClient
 import json
+
+client = GraphqlClient(endpoint="https://api.github.com/graphql")
+oauth_token = os.environ.get("JARATEKING_TOKEN", "")
 
 def queryString(start=2015, end=2020):
 	ret = "query {\n\t viewer {\n"
@@ -29,8 +33,9 @@ def longestStreak(data):
 					currentStreak = False
 	return streak, startDate, endDate
 
-with open('test.json', 'r') as json_file:
-	data = json.load(json_file)
-	streak, startDate, endDate  = longestStreak(data)
-	print("Daily Contributions Streak: **" + str(streak) + "** (" + startDate[0:10] + " to " + endDate[0:10] + ")")
+json_data = client.execute(query=queryString(), headers={"Authorization": "Bearer {}".format(oauth_token)})
+data = json.load(json_data)
+streak, startDate, endDate  = longestStreak(data)
+readme = open('README.md', 'w')
+readme.write("Daily Contributions Streak: **" + str(streak) + "** (" + startDate[0:10] + " to " + endDate[0:10] + ")")
 	
