@@ -1,5 +1,6 @@
 from python_graphql_client import GraphqlClient
 import json
+import os
 
 # setup graphql client 
 client = GraphqlClient(endpoint="https://api.github.com/graphql")
