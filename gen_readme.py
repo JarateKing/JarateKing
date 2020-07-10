@@ -39,7 +39,7 @@ def longestStreak(data):
 
 # main
 json_data = client.execute(query=queryString(), headers={"Authorization": "Bearer {}".format(oauth_token)})
-data = json.load(json_data)
+data = json.load(json.dumps(json_data))
 streak, startDate, endDate  = longestStreak(data)
 readme = open('README.md', 'w')
 readme.write("Daily Contributions Streak: **" + str(streak) + "** (" + startDate[0:10] + " to " + endDate[0:10] + ")")
