@@ -2,6 +2,8 @@
 
 <details><summary>Portfolio</summary>
 
+This is a list of some of the repos that I've done. Note that this isn't every repo, only some of the particularly relevant ones.
+
 ### Gamedev
 
 * [Beowolf Engine](https://github.com/JarateKing/Beowolf-Engine)
