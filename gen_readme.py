@@ -7,7 +7,7 @@ client = GraphqlClient(endpoint="https://api.github.com/graphql")
 oauth_token = os.environ.get("JARATEKING_TOKEN", "")
 
 # setup api query
-def queryString(start=2015, end=2020):
+def queryString(start=2015, end=2021):
 	ret = "query {\n\t viewer {\n"
 	for year in range(start, end + 1):
 		ret = ret + "\t\tq" + str(year) + ": contributionsCollection(from: \"" + str(year) + "-01-01T00:00:00.000+00:00\") { contributionCalendar { weeks { contributionDays { date contributionCount } } } }\n"
@@ -43,4 +43,8 @@ json_data = client.execute(query=queryString(), headers={"Authorization": "Beare
 streak, startDate, endDate  = longestStreak(json_data)
 readme = open('README.md', 'w')
 readme.write("Daily Contributions Streak: **" + str(streak) + "** (" + startDate[0:10] + " to " + endDate[0:10] + ")")
+
+# add additional text
+toappend = open('to_append.md', 'r')
+readme.write(toappend.read())
 	
