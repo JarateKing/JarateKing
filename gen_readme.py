@@ -47,4 +47,3 @@ readme.write("Daily Contributions Streak: **" + str(streak) + "** (" + startDate
 # add additional text
 toappend = open('to_append.md', 'r')
 readme.write(toappend.read())
-	
