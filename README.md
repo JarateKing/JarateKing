@@ -6,7 +6,7 @@ This is a list of some of the repos that I've done. Note that this isn't every r
 
 **Gamedev**: [Beowolf Engine](https://github.com/JarateKing/Beowolf-Engine), [0ngine](https://github.com/JarateKing/0ngine), [GDD Template](https://github.com/JarateKing/gdd-template), [Gamejam Entry](https://github.com/JarateKing/UPEISMCSS-GameJam-2020)
 
-**Libraries**: [Fluassert](https://github.com/JarateKing/fluassert), [inline_tests](https://github.com/JarateKing/inline_tests), [Polymorph Lib](https://github.com/JarateKing/polymorph-lib), [stublib](https://github.com/JarateKing/stublib)
+**Libraries**: [Fluassert](https://github.com/JarateKing/fluassert), [inline_tests](https://github.com/JarateKing/inline_tests), [Polymorph Lib](https://github.com/JarateKing/polymorph-lib), [stublib](https://github.com/JarateKing/stublib), [fullogs](https://github.com/JarateKing/fullogs)
 
 **Game Modding**: [CleanTF2plus](https://github.com/JarateKing/CleanTF2plus), [TF2 Hud Reference](https://github.com/JarateKing/TF2-Hud-Reference), [BaseHud](https://github.com/JarateKing/BaseHud), [jarconfig](https://github.com/JarateKing/jarconfig), [jarconfig-csgo](https://github.com/JarateKing/jarconfig-csgo), [jarconfig-underlords](https://github.com/JarateKing/jarconfig-underlords), [jahud](https://github.com/JarateKing/jahud-tf2), [jxhud](https://github.com/JarateKing/jx-hud)
 
