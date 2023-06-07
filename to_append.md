@@ -4,7 +4,7 @@
 
 This is a list of some of the repos that I've done. Note that this isn't every repo, only some of the particularly relevant ones.
 
-**Gamedev**: [Beowolf Engine](https://github.com/JarateKing/Beowolf-Engine), [0ngine](https://github.com/JarateKing/0ngine), [GDD Template](https://github.com/JarateKing/gdd-template), [Gamejam Entry](https://github.com/JarateKing/UPEISMCSS-GameJam-2020)
+**Gamedev**: [Beowolf Engine](https://github.com/JarateKing/Beowolf-Engine), [0ngine](https://github.com/JarateKing/0ngine), [DiceStats](https://github.com/JarateKing/dicestats), [GDD Template](https://github.com/JarateKing/gdd-template), [Gamejam Entry](https://github.com/JarateKing/UPEISMCSS-GameJam-2020)
 
 **Libraries**: [Fluassert](https://github.com/JarateKing/fluassert), [inline_tests](https://github.com/JarateKing/inline_tests), [Polymorph Lib](https://github.com/JarateKing/polymorph-lib), [stublib](https://github.com/JarateKing/stublib), [fullogs](https://github.com/JarateKing/fullogs)
 
