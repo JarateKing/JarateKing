@@ -43,7 +43,3 @@ json_data = client.execute(query=queryString(), headers={"Authorization": "Beare
 streak, startDate, endDate  = longestStreak(json_data)
 readme = open('README.md', 'w')
 readme.write("Daily Contributions Streak: **" + str(streak) + "** (" + startDate[0:10] + " to " + endDate[0:10] + ")")
-
-# add additional text
-toappend = open('to_append.md', 'r')
-readme.write(toappend.read())
