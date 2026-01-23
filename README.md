@@ -1,4 +1,5 @@
 Daily Contributions Streak: **3028** (2017-10-09 to 2026-01-23)
+---
 
 ![github status](img/status.png)
 
