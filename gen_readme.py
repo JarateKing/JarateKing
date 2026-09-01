@@ -1,6 +1,9 @@
 from python_graphql_client import GraphqlClient
 import json
 import os
+from datetime import datetime
+from dateutil import parser
+from dateutil.relativedelta import relativedelta
 
 # setup graphql client 
 client = GraphqlClient(endpoint="https://api.github.com/graphql")
@@ -38,13 +41,30 @@ def longestStreak(data):
 						currentStreak = False
 	return streak, startDate, endDate
 
+def humanReadableDiff(startDate, endDate):
+	start = parser.parse(startDate)
+	end = parser.parse(endDate)
+	diff = relativedelta(end, start)
+	
+	yearstr = "{} year{}".format(diff.years, "" if diff.years == 1 else "s")
+	monthstr = "{} month{}".format(diff.months, "" if diff.months == 1 else "s")
+	daystr = "{} day{}".format(diff.days, "" if diff.days == 1 else "s")
+	
+	if (diff.years > 0):
+		return "{}, {}, {}".format(yearstr, monthstr, daystr)
+	elif (diff.months > 0):
+		return "{}, {}".format(monthstr, daystr)
+	else:
+		return "{}".format(daystr)
+
 # main
 json_data = client.execute(query=queryString(), headers={"Authorization": "Bearer {}".format(oauth_token)})
-streak, startDate, endDate  = longestStreak(json_data)
+streak, startDate, endDate = longestStreak(json_data)
+diff = humanReadableDiff(startDate, endDate)
 readme = open('README.md', 'w')
 
 prefix = open('prefix.md', 'r')
 readme.write(prefix.read())
-readme.write("Daily Contributions Streak: **" + str(streak) + "** (" + startDate[0:10] + " to " + endDate[0:10] + ")")
+readme.write("Daily Contributions Streak: **" + str(streak) + "** (" + diff + " / " + startDate[0:10] + " to " + endDate[0:10] + ")")
 suffix = open('suffix.md', 'r')
 readme.write(suffix.read())
